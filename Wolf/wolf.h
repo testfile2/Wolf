@@ -56,4 +56,4 @@ typedef struct s_env{
 }				t_env;
 
 void Wolf(t_env *env);
-int get_key_event(int keycode, int *x);
+int get_key_event(int keycode, t_env *env)
