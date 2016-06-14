@@ -6,7 +6,7 @@
 /*   By: kcowle <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/12 11:03:04 by kcowle            #+#    #+#             */
-/*   Updated: 2016/06/14 16:35:10 by kcowle           ###   ########.fr       */
+/*   Updated: 2016/06/13 11:26:59 by kcowle           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,7 @@
 #define h 800
 
 typedef struct s_env{
-	int map_y;
-	int map_x;
-	char **worldmap;
+	int worldMap[mapWidth][mapHeight];
 	int drawEnd;
 	int drawStart;
 	int color;
@@ -57,8 +55,6 @@ typedef struct s_env{
 	int lineHeight;
 }				t_env;
 
-t_env	*insert_map(char *line, t_env *env);
-void	get_map_size(t_env *env, char *argv);
-void 	reDo(t_env *env);
-int 	get_key_event(int keycode, t_env *env);
-void 	wolf(t_env *env);
+void reDo(t_env *env);
+int get_key_event(int keycode, t_env *env);
+void Wolf(t_env *env);
